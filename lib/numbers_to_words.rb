@@ -15,10 +15,9 @@ class Fixnum
                         "5" => "five hundred", "6" => "six hundred", "7" => "seven hundred", "8" => "eight hundred",
                         "9" => "nine hundred" }
 
-    numbers = self.to_s().split("").reverse().each_with_index() do |number, index|
+    self.to_s().split("").reverse().each_with_index() do |number, index|
 
       case index
-
       when 0, 3, 6, 9, 12
         word = ones_values[number]
         if index == 3
