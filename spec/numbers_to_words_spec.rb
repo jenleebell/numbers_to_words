@@ -18,6 +18,17 @@ describe("Fixnum#numbers_to_words") do
 
   it("handles quadruple digit numbers") do
     expect((1325).numbers_to_words()).to(eq("one thousand three hundred twenty five"))
+  end
 
+  it("handles numbers up to the millions") do
+    expect((2221325).numbers_to_words()).to(eq("two million two hundred twenty one thousand three hundred twenty five"))
+  end
+
+  it("handles digit numbers up to the billions") do
+    expect((1325).numbers_to_words()).to(eq("one thousand three hundred twenty five"))
+  end
+
+  it("handles digit numbers up to the trillions") do
+    expect(123456789002.numbers_to_words()).to(eq("one hundred twenty three billion four hundred fifty six million seven hundred eighty nine thousand two"))
   end
 end
