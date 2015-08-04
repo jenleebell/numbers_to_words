@@ -11,4 +11,8 @@ describe("Fixnum#numbers_to_words") do
   it("handles double digit numbers") do
     expect((25).numbers_to_words()).to(eq("twenty five"))
   end
+
+  it("handles triple digit numbers") do
+    expect((325).numbers_to_words()).to(eq("three hundred twenty five"))
+  end
 end
