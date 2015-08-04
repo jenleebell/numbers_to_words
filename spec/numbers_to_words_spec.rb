@@ -25,7 +25,7 @@ describe("Fixnum#numbers_to_words") do
   end
 
   it("handles digit numbers up to the billions") do
-    expect((1325).numbers_to_words()).to(eq("one thousand three hundred twenty five"))
+    expect((12345678901).numbers_to_words()).to(eq("twelve billion three hundred forty five million six hundred seventy eight thousand nine hundred one"))
   end
 
   it("handles digit numbers up to the trillions") do
