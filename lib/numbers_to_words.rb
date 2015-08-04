@@ -14,17 +14,19 @@ class Fixnum
       "5" => "five hundred", "6" => "six hundred", "7" => "seven hundred", "8" => "eight hundred",
       "9" => "nine hundred" }
 
-    # Convert the number string into individual numbers that are numbers
     numbers = self.to_s().split("").reverse.each_with_index() do |number, index|
 
-
       case index
-      when 0
+      when 0, 3, 6, 9, 12
         word = ones_values[number]
-      when 1
+        if index == 3
+          word += " thousand"
+        end
+      when 1, 4, 7, 10
         word = tens_values[number]
-      when 2
+      when 2, 5, 8, 11
         word = hundreds_values[number]
+
       end
 
       final_word.push(word)
