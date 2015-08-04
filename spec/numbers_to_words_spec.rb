@@ -9,6 +9,6 @@ describe("Fixnum#numbers_to_words") do
   end
 
   it("handles double digit numbers") do
-    expect((12).numbers_to_words()).to(eq("twelve"))
+    expect((25).numbers_to_words()).to(eq("twenty five"))
   end
 end
