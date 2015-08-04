@@ -15,10 +15,6 @@ class Fixnum
                         "5" => "five hundred", "6" => "six hundred", "7" => "seven hundred", "8" => "eight hundred",
                         "9" => "nine hundred" }
 
-    # teens_values = { "one one" => "eleven", "one two" => "twelve", "one three" => "thirteen", "one four" => "fourteen",
-    #                  "one five" => "fifteen","one six" => "sixteen", "one seven" => "seventeen", "one eight" => "eighteen",
-    #                  "one nine" => "nineteen" }
-
     numbers = self.to_s().split("").reverse().each_with_index() do |number, index|
 
       case index
